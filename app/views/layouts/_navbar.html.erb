@@ -27,12 +27,12 @@
             <%= link_to "Log out!",  destroy_user_session_path, data: {turbo_method: :delete},class: "nav-link"%>
           <% end %>
         <% else %>
-          <% if request.path = new_user_session_path%>
+          <% if request.path == new_user_session_path%>
             <%= link_to "Authentificate!",  new_user_session_path, class: "nav-link active"%>
           <% else %>
             <%= link_to "Authentificate!",  new_user_session_path, class: "nav-link"%>
           <% end %>
-          <% if request.path = new_user_registration_path%>
+          <% if request.path == new_user_registration_path%>
             <%= link_to "Creaza-ti cont!",  new_user_registration_path, class: "nav-link active"%>
           <% else %>
             <%= link_to "Creaza-ti cont!",  new_user_registration_path, class: "nav-link"%>
