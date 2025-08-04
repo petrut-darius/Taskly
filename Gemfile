@@ -5,9 +5,6 @@ gem "rails", "~> 8.0.2"
 # The modern asset pipeline for Rails [https://github.com/rails/propshaft]
 gem "propshaft"
 # Use sqlite3 as the database for Active Record
-gem "sqlite3", ">= 2.1", group: :development
-gem "pg", group: :production
-gem "rails_12factor", group: :production
 
 # Use the Puma web server [https://github.com/puma/puma]
 gem "puma", ">= 5.0"
@@ -66,3 +63,12 @@ group :test do
 end
 
 gem "devise", "~> 4.9"
+
+
+group :development, :test do
+  gem "sqlite3"
+end
+
+group :production do
+  gem "pg"
+end
