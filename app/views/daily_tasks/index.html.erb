@@ -1,0 +1,7 @@
+<h1>Here are all your Daily Tasks!</h1>
+<%= link_to "Create a dailiy task!", new_daily_task_path%><br>
+<% if DailyTask.exists?%>
+  <% @daily_tasks.each do |task|%>
+    <%= render "daily_tasks/daily_task", daily_task: task%><br>
+  <% end %> 
+<% end %>

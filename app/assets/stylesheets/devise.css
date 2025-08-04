@@ -1,0 +1,78 @@
+:root {
+  --long-black: #231010;
+  --espresso-brown: #3C2415;
+  --mocha-chocolate: #7B3F1D;
+  --frappe-caramel: #AD7D3D;
+  --cappuccino-cream: #D5C4B1;
+  --flat-white: #F0E6CF;
+}
+
+body.devise {
+  background-color: var(--flat-white);
+  font-family: 'Segoe UI', sans-serif;
+  color: var(--long-black);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+  padding: 2rem;
+}
+
+.devise-container {
+  background-color: var(--cappuccino-cream);
+  padding: 2rem;
+  border-radius: 10px;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
+  max-width: 400px;
+  width: 100%;
+}
+
+.devise-container h2 {
+  margin-bottom: 1rem;
+  color: var(--espresso-brown);
+  text-align: center;
+}
+
+input[type=\"email\"], input[type=\"password\"], input[type=\"text\"] {
+  width: 100%;
+  padding: 0.75rem;
+  margin-bottom: 1rem;
+  border: 2px solid var(--mocha-chocolate);
+  border-radius: 6px;
+  background-color: #fff;
+  color: var(--long-black);
+}
+
+input:focus {
+  border-color: var(--frappe-caramel);
+  outline: none;
+}
+
+.actions input[type=\"submit\"] {
+  background-color: var(--mocha-chocolate);
+  color: white;
+  padding: 0.75rem;
+  width: 100%;
+  border: none;
+  border-radius: 6px;
+  cursor: pointer;
+  transition: background 0.3s ease;
+}
+
+.actions input[type=\"submit\"]:hover {
+  background-color: var(--frappe-caramel);
+}
+
+.devise-links {
+  text-align: center;
+  margin-top: 1rem;
+}
+
+.devise-links a {
+  color: var(--mocha-chocolate);
+  text-decoration: none;
+}
+
+.devise-links a:hover {
+  color: var(--frappe-caramel);
+}

@@ -1,0 +1,21 @@
+<p style="color: green"><%= notice %></p>
+
+<% content_for :title, "Projects" %>
+
+<div class="max-w-3xl mx-auto px-4">
+  <h1 class="text-2xl font-bold mb-4 text-[--espresso-brown] text-center">All Projects</h1>
+
+  <div class="mb-4 text-center">
+    <%= link_to "New Project", new_project_path %>
+  </div>
+
+  <div class="grid gap-4">
+    <% @projects.each do |project| %>
+      <div class="bg-[--milk-foam] p-4 rounded-lg shadow border border-[--latte-cream]">
+        <h2 class="text-lg font-semibold text-[--long-black]">
+          <%= link_to project.name, project_path(project), class: "hover:underline" %>
+        </h2>
+      </div>
+    <% end %>
+  </div>
+</div>

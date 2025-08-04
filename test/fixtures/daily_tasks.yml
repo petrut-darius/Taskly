@@ -1,0 +1,11 @@
+# Read about fixtures at https://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  name: MyString
+  get_till_done: 2025-08-04 16:10:46
+  user: one
+
+two:
+  name: MyString
+  get_till_done: 2025-08-04 16:10:46
+  user: two

@@ -1,0 +1,7 @@
+<h1>Here are all your Project Tasks!</h1>
+<p>Reload the page after you click "done?"</p>
+<% if ProjectTask.exists?%>
+  <% project_tasks.each do |task|%>
+    <%= render "project_tasks/project_task", project: project,project_task: task%><br>
+  <% end %> 
+<% end %>

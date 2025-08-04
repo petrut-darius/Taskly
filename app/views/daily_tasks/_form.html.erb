@@ -1,0 +1,27 @@
+<%= form_with(model: daily_task) do |form| %>
+  <% if daily_task.errors.any? %>
+    <div style="color: red">
+      <h2><%= pluralize(daily_task.errors.count, "error") %> prohibited this task from being saved:</h2>
+
+      <ul>
+        <% daily_task.errors.full_messages.each do |message| %>
+          <li><%= message %></li>
+        <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="form-group">
+    <%= form.label :name %>
+    <%= form.text_field :name, autofocus: true, autocomplete: 'name', class: 'form-control' %>
+  </div>
+
+  <div class="form-group">
+    <%= form.label :get_till_done, 'Due Date & Time' %>
+    <%= form.datetime_select :get_till_done, class: 'form-control' %>
+  </div>
+
+  <div class="form-group mt-3">
+    <%= form.submit 'Save Task'%>
+  </div>
+<% end %>

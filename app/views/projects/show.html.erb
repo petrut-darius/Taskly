@@ -1,0 +1,14 @@
+<p style="color: green"><%= notice %></p>
+
+<%= render @project %>
+<p>Is the project active? -> <b><%= @project.active%></b></p>
+<%= render "project_tasks/new", project_task: @project_task%>
+
+<div style="background-color: #D5C4B1; padding: 15px; border-radius: 8px; text-align: center;">
+  <%= link_to "Edit this project", edit_project_path(@project), style: "color: #3C2415; text-decoration: none; margin-right: 15px;" %> |
+  <%= link_to "Back to projects", projects_path, style: "color: #3C2415; text-decoration: none; margin-left: 15px;" %>
+
+  <%= button_to "Destroy this project", @project, method: :delete, style: "background-color: #A9746E; color: white; border: none; padding: 8px 12px; border-radius: 5px; margin-left: 20px; cursor: pointer;" %>
+</div>
+
+<%= render "project_tasks/project_tasks", project_tasks: @project.project_tasks.all, project: @project%>

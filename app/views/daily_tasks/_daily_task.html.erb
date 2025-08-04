@@ -1,0 +1,3 @@
+<b><%= daily_task.name%></b>
+pana la <%= time_tag daily_task.get_till_done, "data-local": "time-ago"%>
+<%= link_to "Done?", daily_task_path(daily_task), data: {turbo_method: :delete}%>

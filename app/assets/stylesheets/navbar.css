@@ -1,0 +1,31 @@
+    :root {
+      --long-black: #231010;
+      --espresso-brown: #3C2415;
+      --mocha-chocolate: #7B3F1D;
+      --frappe-caramel: #AD7D3D;
+      --cappuccino-cream: #D5C4B1;
+      --flat-white: #F0E6CF;
+    }
+
+    .navbar-coffee {
+      background-color: var(--espresso-brown) !important;
+    }
+
+    .navbar-coffee .navbar-brand,
+    .navbar-coffee .nav-link {
+      color: var(--flat-white) !important;
+    }
+
+    .navbar-coffee .nav-link:hover,
+    .navbar-coffee .nav-link.active {
+      color: var(--frappe-caramel) !important;
+    }
+
+    .navbar-coffee .nav-link.disabled {
+      color: #aaa !important;
+    }
+
+    .navbar-toggler {
+      background-color: var(--mocha-chocolate);
+      border: none;
+    }
